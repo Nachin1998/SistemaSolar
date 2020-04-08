@@ -1,5 +1,5 @@
 sceneSetups:
-- path: C:/Users/Usuario/Desktop/DVJ02_2020/DVJ02 2020/Assets/Clases/Clase 03/En clase/Starmap.unity
+- path: Assets/Scenes/SolarSystem.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
