@@ -1,8 +1,5 @@
-﻿using JetBrains.Annotations;
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 
@@ -12,6 +9,9 @@ public class PlanetOribting : MonoBehaviour
     public float orbitingSpeed;
     public bool rotatesOnOwnAxis = true;
     public float ownRotationSpeed;
+
+    float actualPosX;
+    float actualPosZ;
 
     void Orbit(GameObject planet, float speed)
     {
