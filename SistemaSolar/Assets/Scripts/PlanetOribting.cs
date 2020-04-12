@@ -17,7 +17,7 @@ public class PlanetOribting : MonoBehaviour
 
     void Orbit(GameObject planet, float speed)
     {
-        transform.RotateAround(planet.transform.position, Vector3.down, speed * Time.deltaTime);
+        transform.RotateAround(planet.transform.position, new Vector3(10,10,10), speed * Time.deltaTime);
     }
 
     void Start()
@@ -29,7 +29,6 @@ public class PlanetOribting : MonoBehaviour
 
     void Update()
     {
-       // Orbit(starToOrbit, orbitingSpeed);
 
         if(rotatesOnOwnAxis)
         {
