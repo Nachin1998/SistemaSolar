@@ -4860,7 +4860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdf81f2436fcaf4381c6fa166004f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starToOrbit: {fileID: 0}
+  starToOrbit: {fileID: 2915207564135556102, guid: b5e806c35051cbc43ba5256fc167b69d,
+    type: 3}
   distanceFromSun: 170
   orbitingSpeed: 1
   rotatesOnOwnAxis: 1
@@ -4904,7 +4905,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 2.5
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1

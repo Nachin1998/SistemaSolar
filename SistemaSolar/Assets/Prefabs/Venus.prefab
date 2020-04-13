@@ -199,7 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdf81f2436fcaf4381c6fa166004f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starToOrbit: {fileID: 0}
+  starToOrbit: {fileID: 2915207564135556102, guid: b5e806c35051cbc43ba5256fc167b69d,
+    type: 3}
   distanceFromSun: 70
   orbitingSpeed: 1
   rotatesOnOwnAxis: 1
@@ -222,7 +223,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 33574fa1b36c9244ebeedb7e591ed39b, type: 2}
+  - {fileID: 2100000, guid: 7a474fad7982a8e42af709db5f90c4f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -243,7 +244,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1

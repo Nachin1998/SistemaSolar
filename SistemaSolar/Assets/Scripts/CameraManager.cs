@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    public List <GameObject> planets = new List<GameObject>();
-
+    public GameObject sun;
+    public List<GameObject> planets = new List<GameObject>();
+    public GameObject spaceship;
+    public Vector3 offset;
+    public float camVelocity = 60;
+    Vector3 newPos;
     int objectNumber;
 
-    void Start()
+    void CameraMovement(GameObject objectToLookAt)
     {
-        objectNumber = 0;
-
-        Camera.main.transform.position = new Vector3(planets[objectNumber].transform.position.x,
-            planets[objectNumber].transform.position.y,
-            planets[objectNumber].transform.position.z - planets[objectNumber].transform.localScale.z * 2);    
+        offset.z = -objectToLookAt.transform.localScale.z * 2;
+        newPos = objectToLookAt.transform.position + offset;
     }
-
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
+
         if (Input.GetKey(KeyCode.Alpha0))
         {
             objectNumber = 0;
@@ -56,15 +56,20 @@ public class CameraManager : MonoBehaviour
         {
             objectNumber = 8;
         }
-        if (Input.GetKey(KeyCode.Alpha9))
+
+        switch (objectNumber)
         {
-            objectNumber = 9;
+            case 0:
+                CameraMovement(sun);
+                break;
+            case 8:
+                CameraMovement(spaceship);
+                break;
+            default:
+                CameraMovement(planets[objectNumber]);
+                break;
         }
 
-        Camera.main.transform.position = new Vector3(planets[objectNumber].transform.position.x, 
-            planets[objectNumber].transform.position.y, 
-            planets[objectNumber].transform.position.z - planets[objectNumber].transform.localScale.z * 2);
-
-        Camera.main.transform.LookAt(planets[objectNumber].transform);
+        transform.position = Vector3.Lerp(transform.position, newPos, camVelocity * Time.deltaTime);
     }
 }
